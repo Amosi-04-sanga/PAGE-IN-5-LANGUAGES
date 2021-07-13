@@ -1,2 +1,2 @@
 # PAGE-WITH-5-LANGUAGE
-simple web page with 5 languages
+simple web page in 5 languages: english, chinese, japan, hindi and france.
