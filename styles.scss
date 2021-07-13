@@ -1,0 +1,181 @@
+// google font.
+@import url('https://fonts.googleapis.com/css2?family=Merienda&display=swap');
+
+html {
+    font-size: 16px;
+}
+
+*, 
+*::before, 
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+   margin: 40px auto;
+   background-color: #fff;
+   color: black;
+}
+
+a {
+    color: black;
+}
+
+select, 
+option {
+    border: none;
+    outline: none;
+    width: 100%;
+    text-transform: capitalize;
+}
+
+.nav {
+   position: relative;
+   height: 100px;
+   padding-left: 15px;
+
+   &__logo {
+       width: 100px;
+       height: 50px;
+       background-image: url("./IMAGES/LOGO.jpg");
+       background-position: center;
+       background-repeat: no-repeat;
+       background-size: cover;
+   }
+
+   &__list {
+       height: 50px;
+       width: 300px;
+
+       display: flex;
+       align-items: center;
+       justify-content: space-around;
+   }
+
+   &__item {
+       list-style-type: none;
+   }
+
+   &__link {
+       text-decoration: none;
+   }
+
+   &__menu-burder {
+       position: absolute;
+       top: 8%;
+       right: 4%;
+       transform: translate(5%, -5%);
+
+       background-image: url(./IMAGES/menu.png);
+       background-repeat: no-repeat;
+       background-position: center;
+       //background-size: contain;       
+       width: 30px;
+       height: 30px;
+       border: 1px solid black;
+       border-radius: 4px;
+   }
+
+}
+
+
+
+.main {
+
+   margin: 2rem auto;
+   width: 80%;
+   font-family: 'Merienda', cursive;
+   padding: 1rem;
+
+    &__flex {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &__txt--italic {
+        padding-left: 1rem;
+        opacity: .7;
+        font-style: italic;
+        font-size: .8rem;
+    }
+
+    // select language.
+    &__choose-lang {
+        display: block;
+        width: 6rem;
+        padding: .2rem;
+        border-radius: .5rem;
+        border: 1px solid black;
+        margin: 1rem 0 2rem auto;
+    }
+
+    &__header {
+        text-transform: uppercase;
+        margin: 2rem 0;
+        text-align: center;
+    }
+
+    &__content {
+      display: none;
+      border: none;
+      border-radius: 5px;
+      padding: 1rem .5rem;
+      box-shadow: 0 0 8px 0 grey;
+    }
+
+    &__content.active {
+        display: block;
+    }
+
+    &__indent {
+        text-indent: 2rem;
+    } 
+
+    &__txt {
+        padding: .4rem 0;
+    }
+
+    &__ad-container {
+        height: 30vh;
+    }
+
+    &__tigo-ad {
+        display: none;
+    }
+
+    &__ad-photo {
+        width: 100%;
+        height: 100%;
+    }
+
+}
+
+@media only screen and ( min-width: 700px ) {
+
+
+     .main {
+
+        display: grid;
+        grid-template-columns: 70% 30%;
+        grid-gap: 2rem;
+        width: 96%;
+        margin: 0;
+
+     
+        &__tigo-ad {
+            position: sticky;
+            top: 2rem;
+            left: 0;
+            display: block;
+        }
+
+        &__tigo-ad:hover {
+            filter: brightness(.7);
+        }
+
+     }
+
+}
